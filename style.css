@@ -1,0 +1,297 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Roboto:ital,wght@0,100;0,400;1,300&display=swap");
+
+:root {
+  --texto-principal: "Cinzel", sans-serif;
+  --texto-secundario: "Roboto", sans-serif;
+  --color-fondo: #faf5f5;
+}
+html {
+  scroll-behavior: smooth;
+}
+img {
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+  color: white;
+  font-family: var(--texto-secundario);
+}
+body {
+  background-color: var(--color-fondo);
+}
+
+/* Estilos del nav */
+.logo {
+  font-size: 2rem;
+  font-family: var(--texto-principal);
+}
+.nav-item .nav-link {
+  color: white;
+  transition: color 0.3s ease;
+  padding: 1px;
+}
+.nav-item,
+.nav-link:hover {
+  color: rgb(48, 189, 207);
+}
+
+/* Estilos del Hero principa; */
+
+.hero {
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(./imagenes/iguazu.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top, center;
+}
+
+.title-principal {
+  font-size: 2.5rem;
+  font-family: var(--texto-principal);
+}
+
+.title-secundary {
+  font-size: 1.6rem;
+  font-weight: 500;
+  font-family: var(--texto-secundario);
+}
+
+.hero-titles {
+  padding: 3rem;
+  background-color: rgba(39, 36, 36, 0.4);
+}
+
+.hero-titles,
+.logo {
+  animation-name: mostrarImagen;
+  animation-duration: 5s;
+}
+
+@keyframes mostrarImagen {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Estilos de tarjetas Circulares */
+.card {
+  font-family: var(--texto-secundario);
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .card-item {
+    border-radius: 50%;
+    overflow: hidden;
+    filter: brightness(0.5);
+    transition: 0.5s;
+  }
+  .card-item p {
+    color: rgb(255, 255, 255, 0.8);
+  }
+
+  .card-item:hover {
+    filter: brightness(1);
+  }
+  .card-img {
+    height: 250px;
+  }
+
+  .separator {
+    box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.5);
+  }
+  .second-separator {
+    border: none;
+    transition: border 0.3s;
+  }
+  .second-separator:hover {
+    box-shadow: 0 0 10px 5px rgba(3, 14, 80, 0.842);
+  }
+}
+
+/* Estilos del banner de Historia  y Pagina Principa; */
+.card-img-perfil {
+  margin-bottom: 10px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.text-history {
+  color: #000000;
+  font-family: var(--texto-secundario);
+}
+
+@media (min-width: 768px) {
+  .banner-history {
+    background-image: url(./imagenes/imagen6.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 30vh;
+  }
+
+  .text-history {
+    text-align: start;
+  }
+  .card-history {
+    margin-top: -15px;
+    margin-left: 10%;
+    border-radius: 0;
+    box-shadow: -4px -1px 17px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -4px -1px 17px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -4px -1px 17px 0px rgba(0, 0, 0, 0.75);
+  }
+}
+
+/* Estilos pagina Header History; */
+.bg-friends {
+  background-image: url(./imagenes/sociales.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  min-height: 75vh;
+}
+.bg-friends-II {
+  background-image: url(./imagenes/nevado.jpg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  min-height: 75vh;
+}
+
+@media (min-width: 989px) {
+  .target-history,
+  .target-history-II {
+    background-color: white;
+  }
+  .target-history {
+    position: relative;
+    top: 5%;
+    right: 12%;
+    box-shadow: 8px 5px 12px 3px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 8px 5px 12px 3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 8px 5px 12px 3px rgba(0, 0, 0, 0.75);
+  }
+  .target-history-II {
+    position: relative;
+    top: 5%;
+    left: 12%;
+    box-shadow: -2px 6px 12px 3px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -2px 6px 12px 3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -2px 6px 12px 3px rgba(0, 0, 0, 0.75);
+  }
+  .bg-friends-II {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .target-history,
+  .target-history-II {
+    border: none;
+  }
+  .target-history,
+  .target-history-II {
+    background-color: var(--color-fondo);
+  }
+}
+
+/* Estilos Excursiones nav; */
+@media (min-width: 768px) {
+  .nav-excursiones {
+    background-image: url(./imagenes/treking.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 15vh;
+  }
+}
+
+/* Estilos Excursiones imagen Card; */
+@media (min-width: 768px) {
+  .card-img-top {
+    max-width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+  }
+}
+
+.footer a {
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #44d5e6;
+}
+
+.section-contact {
+  background-image: url(./imagenes/imagen7.jpg);
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 90vh;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  outline: aquamarine;
+  background-color: rgb(206, 247, 233);
+}
+
+/* Estilos para el texto del placeholder */
+#name::placeholder,
+#mail::placeholder,
+#telephone::placeholder,
+#comment::placeholder {
+  font-weight: bold;
+  color: whitesmoke;
+  font-family: var(--texto-secundario);
+}
+.form-control {
+  background: rgb(28, 148, 194);
+  background: linear-gradient(
+    90deg,
+    rgba(28, 148, 194, 1) 0%,
+    rgba(41, 149, 156, 1) 2%,
+    rgba(37, 94, 106, 1) 74%
+  );
+}
+
+.card-contacto {
+  background-color: rgba(255, 253, 253, 0.4);
+  margin: 0 auto;
+}
+.btn-contact {
+  background-color: #203c3d;
+  font-style: var(--texto-secundario);
+  color: #faf5f5;
+  letter-spacing: 0.5px;
+  border: none;
+  transition: background-color 0.3 ease;
+}
+.btn-contact:hover {
+  background-color: #09595c;
+  color: rgb(5, 5, 5);
+}
+
+.form-title {
+  font-weight: bold;
+  font-size: 3rem;
+  font-family: var(--texto-principal);
+}
+.form-text {
+  font-size: 1.8rem;
+}
